@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма реєстрації</title>
+  </head>
+  <body>
+    <main class="main">
+      <form class="form" action="">
+        <div class="form__item">
+          <label class="form__field" for="">Повне ім'я</label>
+          <input class="form__personally" type="text" />
+        </div>
+        <div class="form__item">
+          <label class="form__field" for="">Email</label>
+          <input class="form__personally" type="email" />
+        </div>
+        <div class="form__item">
+          <label class="form__field" for="">Пароль</label>
+          <input class="form__personally" type="password" />
+        </div>
+        <div class="form__item">
+          <label class="form__field" for="">Повторіть пароль</label>
+          <input class="form__personally" type="password" />
+        </div>
+        <fieldset class="form__radio">
+          <legend>Стать</legend>
+          <label class="form__field" for="">
+            Чоловіча
+            <input class="form__radiobox" type="radio" name="gender" value="male" checked />
+          </label>
+          <label class="form__field" for="">
+            Жіноча
+            <input class="form__radiobox" type="radio" name="gender" value="male" />
+          </label>
+        </fieldset>
+        <div class="form__item">
+          <label class="form__field" for="">Вік</label>
+          <input class="form__personally" type="number" />
+        </div>
+        <div class="form__item">
+          <label for="form__select">Курс</label>
+          <select id="select" name="course">
+            <option value="">--Виберіть курс--</option>
+            <option value="">Front-End</option>
+            <option value="">Back-End</option>
+            <option value="">Project Management</option>
+            <option value="">QA Manual</option>
+          </select>
+        </div>
+        <div class="form__item">
+          <label class="form__field" for="">Повна адреса</label>
+          <textarea class="form__area" type="text"></textarea>
+        </div>
+        <div class="form__agreement">
+          <input class="form__policy" type="checkbox" />
+          <label for="">Я погоджуюсь з обробкою персональних даних</label>
+        </div>
+        <div class="form__button">
+          <button class="form__reset" type="reset">Очистити форму</button>
+          <button class="form__submit" type="submit">Очистити форму</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
