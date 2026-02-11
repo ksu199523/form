@@ -1,7 +1,75 @@
+body{
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
 .container {
-  max-width: 1420px;
+  max-width: 1000px;
   padding: 0 10px;
+  margin: 20px auto;
+}
+
+.form{
+  max-width: 700px;
   margin: 0 auto;
+  background-color: black;
+  padding: 50px;
+}
+
+.form__items{
   display: flex;
-  gap: 100px;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.form__item{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__field{
+  width: 50%;
+}
+
+.form__radio legend{
+  text-align: center;
+}
+
+.form__radio{
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__agreement{
+ margin-bottom: 30px;
+}
+
+.form__button{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.btn{
+  background-color: #fff;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 800px;
+  padding: 12px;
+  transition: all .3s ease;
+}
+
+.btn:hover{
+  background-color: black;
+  color: #fff;
+  border: 2px solid #fff;
 }

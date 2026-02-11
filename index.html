@@ -4,64 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Форма реєстрації</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP&family=Montserrat:wght@600&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main class="main">
-      <form class="form" action="">
-        <div class="form__item">
-          <label class="form__field" for="">Повне ім'я</label>
-          <input class="form__personally" type="text" />
-        </div>
-        <div class="form__item">
-          <label class="form__field" for="">Email</label>
-          <input class="form__personally" type="email" />
-        </div>
-        <div class="form__item">
-          <label class="form__field" for="">Пароль</label>
-          <input class="form__personally" type="password" />
-        </div>
-        <div class="form__item">
-          <label class="form__field" for="">Повторіть пароль</label>
-          <input class="form__personally" type="password" />
-        </div>
-        <fieldset class="form__radio">
-          <legend>Стать</legend>
-          <label class="form__field" for="">
-            Чоловіча
-            <input class="form__radiobox" type="radio" name="gender" value="male" checked />
-          </label>
-          <label class="form__field" for="">
-            Жіноча
-            <input class="form__radiobox" type="radio" name="gender" value="male" />
-          </label>
-        </fieldset>
-        <div class="form__item">
-          <label class="form__field" for="">Вік</label>
-          <input class="form__personally" type="number" />
-        </div>
-        <div class="form__item">
-          <label for="form__select">Курс</label>
-          <select id="select" name="course">
-            <option value="">--Виберіть курс--</option>
-            <option value="">Front-End</option>
-            <option value="">Back-End</option>
-            <option value="">Project Management</option>
-            <option value="">QA Manual</option>
-          </select>
-        </div>
-        <div class="form__item">
-          <label class="form__field" for="">Повна адреса</label>
-          <textarea class="form__area" type="text"></textarea>
-        </div>
-        <div class="form__agreement">
-          <input class="form__policy" type="checkbox" />
-          <label for="">Я погоджуюсь з обробкою персональних даних</label>
-        </div>
-        <div class="form__button">
-          <button class="form__reset" type="reset">Очистити форму</button>
-          <button class="form__submit" type="submit">Очистити форму</button>
-        </div>
-      </form>
+      <div class="container">
+        <form class="form" action="#" method="post">
+          <div class="form__items">
+            <div class="form__item">
+              <label class="form__field" for="fullname">Повне ім'я</label>
+              <input class="form__personally" type="text" id="fullname" name="fullname" placeholder="Введіть повне ім'я" required/>
+            </div>
+            <div class="form__item">
+              <label class="form__field" for="email">Email</label>
+              <input class="form__personally" type="email" id="email" name="email" placeholder="example@email.com" required/>
+            </div>
+            <div class="form__item">
+              <label class="form__field" for="password">Пароль</label>
+              <input class="form__personally" type="password" id="password" name="password" minlength="6" required />
+            </div>
+            <div class="form__item">
+              <label class="form__field" for="confirm-password">Повторіть пароль</label>
+              <input class="form__personally" type="password" id="confirm-password" name="confirm-password" minlength="6" required/>
+            </div>
+            <fieldset class="form__radio">
+              <legend>Стать</legend>
+              <label for="male">
+                <input class="form__radiobox" type="radio" id="male" name="gender" value="male" checked />
+                Чоловіча
+              </label>
+              <label for="female">
+                <input class="form__radiobox" type="radio" id="female" name="gender" value="female" />
+                Жіноча
+              </label>
+            </fieldset>
+            <div class="form__item">
+              <label class="form__field" for="age">Вік</label>
+              <input class="form__personally" type="number" id="age" name="age" min="1" max="120" required />
+            </div>
+            <div class="form__item">
+              <label class="form__field" for="course">Курс</label>
+              <select id="course" name="course" required>
+                <option value="" >--Виберіть курс--</option>
+                <option value="frontend">Front-End</option>
+                <option value="backend">Back-End</option>
+                <option value="pm">Project Management</option>
+                <option value="qa">QA Manual</option>
+              </select>
+            </div>
+            <div class="form__item">
+              <label class="form__field" for="address">Повна адреса</label>
+              <textarea
+                class="form__area"
+                id="address"
+                name="address"
+                rows="4"
+                placeholder="Введіть повну адресу"
+              ></textarea>
+            </div>
+          </div>
+          <div class="form__agreement">
+            <input class="form__policy" type="checkbox" id="policy" name="policy" required />
+            <label for="policy"> Я погоджуюсь з обробкою персональних даних </label>
+          </div>
+          <div class="form__button">
+            <button class="form__reset btn" type="reset">Очистити форму</button>
+            <button class="form__submit btn" type="submit">Зареєструватися</button>
+          </div>
+        </form>
+      </div>
     </main>
   </body>
 </html>
